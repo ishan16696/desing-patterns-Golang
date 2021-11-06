@@ -25,7 +25,7 @@ func (e *EmployeeBuild) SetName(name string) *EmployeeBuild {
 	return e
 }
 
-func (e *EmployeeBuild) SetDesgination(tech []string) *EmployeeBuild {
+func (e *EmployeeBuild) SetTechStack(tech []string) *EmployeeBuild {
 	e.tech = tech
 	return e
 }
