@@ -24,3 +24,23 @@
       *  ```go
           emp1 := fact.SetName("Ishan").SetTechStack([]string{"C++", "Docker", "Go"}).BuildDev()
           ```
+
+ 3. [Usage of interface](https://github.com/ishan16696/design-patterns-Golang/tree/main/Interface)
+    - Define an interface
+         * ```go
+           // Action is a context-aware action.
+           type Action interface {
+               // Do performs an action.
+               Do(ctx context.Context)
+           }
+           ```
+    -  Implements that interface
+         * ```go
+            // ActionFunc is a function that implements Action.
+            type ActionFunc func(ctx context.Context)
+
+            // Do performs an action.
+            func (f ActionFunc) Do(ctx context.Context) {
+                f(ctx)
+            }
+           ```
